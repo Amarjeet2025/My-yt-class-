@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple YouTube Playlists</title>
+    <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url('amar.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+           
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="container">
+        <!-- Existing Playlists -->
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLAeePiDQTajfiMhm7KrLcYLdST4IGGDoW" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLJvbi0USATRvgLIxAISIp-waPr-4sn35K" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLw2ZiQ6OwlOX_JsxLNxetO_RCVw-BYaO_" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLLGcqnlfaqWKB1N2tHPNt8zxXX-niApYf" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLSiaL0Oo9hvBLaqWrgKDadjV9zRkepIyG" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLSiaL0Oo9hvCaJkeO-gYwkSbFCJBcRDrK" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PL2Li3eVAuCF4O1yEzilQWrMi-TgTWVU0y" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLSiaL0Oo9hvBPGsdV45UVNIo7SrYjwyXr" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PL2Li3eVAuCF7YcFw2tlvGjhOJ-VETmYKh" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLSiaL0Oo9hvCh978XN23pVonUySsrHCQG" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLxSW0jqW5e1lgGtK6mRB40iS_D9b5AWgQ" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <!-- New Added Playlists -->
+        <!-- Playlist 11 -->
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLw2ZiQ6OwlOXt_N_Soe35PrAOezdhwGZZ" 
+                    allowfullscreen></iframe>
+        </div>
+
+       
+     
+        <!-- Playlist 13 -->
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLw2ZiQ6OwlOVCRXNL0JwduUyeSaclBwGy" 
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Orientation lock script
+        document.addEventListener('fullscreenchange', function() {
+            if (document.fullscreenElement) {
+                screen.orientation.lock('landscape').catch(error => {
+                    console.log('Orientation lock failed: ', error);
+                });
+            } else {
+                screen.orientation.unlock();
+            }
+        });
+    </script>
+</body>
+</html>
